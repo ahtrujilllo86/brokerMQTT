@@ -1,7 +1,8 @@
-const mosca = require('mosca');
+// const mosca = require('mosca');
+import moscaBroker from 'mosca';
 const settings = { port: 1883 };
 
-const broker = new mosca.Server(settings);
+const broker = new moscaBroker.Server(settings);
 
 broker.on('ready', () => {
   console.log('Broker Up!');
